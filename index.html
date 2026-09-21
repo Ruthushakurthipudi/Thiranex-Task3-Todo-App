@@ -1,0 +1,99 @@
+%%writefile /content/Thiranex-Task3/index.html
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow | Thiranex</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app-container">
+
+        <header>
+            <h1>TaskFlow</h1>
+            <p>Organize your day. Achieve your goals.</p>
+        </header>
+
+        <section class="todo-card">
+
+            <form id="taskForm">
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Enter a new task..."
+                    maxlength="200"
+                    required
+                >
+
+                <button type="submit">Add Task</button>
+
+            </form>
+
+            <div class="stats">
+
+                <div>
+                    <strong id="totalTasks">0</strong>
+                    <span>Total</span>
+                </div>
+
+                <div>
+                    <strong id="activeTasks">0</strong>
+                    <span>Active</span>
+                </div>
+
+                <div>
+                    <strong id="completedTasks">0</strong>
+                    <span>Completed</span>
+                </div>
+
+            </div>
+
+            <nav class="filters">
+
+                <button type="button"
+                        class="filter-btn active"
+                        data-filter="all">
+                    All
+                </button>
+
+                <button type="button"
+                        class="filter-btn"
+                        data-filter="active">
+                    Active
+                </button>
+
+                <button type="button"
+                        class="filter-btn"
+                        data-filter="completed">
+                    Completed
+                </button>
+
+            </nav>
+
+            <ul id="taskList"></ul>
+
+            <p id="emptyMessage" class="empty-message">
+                No tasks yet. Add your first task!
+            </p>
+
+        </section>
+
+        <footer>
+            <p>Built for Thiranex Internship</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
